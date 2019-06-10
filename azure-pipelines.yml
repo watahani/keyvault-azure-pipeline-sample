@@ -25,14 +25,6 @@ steps:
     SecretsFilter: '*'
 
 - script: |
-    echo key1 and testkey
-    ls -l
-    echo "echo $key1"
-    echo $key1
-    echo $key1 > key1
-    echo "cat key1"
-    cat key1
-    echo $testkey
-    printenv
+    echo $key1 | base64 -d
   env:
     key1: $(key1)
