@@ -34,3 +34,5 @@ steps:
     cat key1
     echo $testkey
     printenv
+  env:
+    MySecret: $(key1)
