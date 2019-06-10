@@ -25,5 +25,7 @@ steps:
     SecretsFilter: '*'
 
 - script: |
-    echo $key1
+    echo key1 and testkey
+    echo $key1 > key1
+    cat key1
     echo $testkey
