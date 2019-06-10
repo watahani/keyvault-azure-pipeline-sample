@@ -35,4 +35,4 @@ steps:
     echo $testkey
     printenv
   env:
-    MySecret: $(key1)
+    key1: $(key1)
