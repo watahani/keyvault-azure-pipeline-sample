@@ -27,5 +27,7 @@ steps:
 - script: |
     echo key1 and testkey
     echo $key1 > key1
+    ls -l
     cat key1
     echo $testkey
+    printenv
