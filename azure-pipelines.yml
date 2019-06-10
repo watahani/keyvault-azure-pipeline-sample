@@ -25,5 +25,13 @@ steps:
     SecretsFilter: '*'
 
 - script: |
-    echo $key1
-    echo $testkey
+    echo $key1 > key
+    echo $testkey > testkey
+
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(Build.BinariesDirectory)'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
