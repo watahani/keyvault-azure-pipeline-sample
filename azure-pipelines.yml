@@ -17,3 +17,9 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- task: AzureKeyVault@1
+  inputs:
+    azureSubscription: 'wahaniya-corp(24cb7a23-a4cf-40e1-a530-af25a0a1060d)'
+    KeyVaultName: 'kv-azurepipeline-sample'
+    SecretsFilter: '*'
