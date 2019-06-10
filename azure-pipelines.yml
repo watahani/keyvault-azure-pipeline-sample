@@ -25,6 +25,6 @@ steps:
     SecretsFilter: '*'
 
 - script: |
-    echo $key1 | base64 -d
+    echo $key1 | base64
   env:
     key1: $(key1)
