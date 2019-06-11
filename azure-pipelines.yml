@@ -28,11 +28,17 @@ steps:
     echo $key1 | base64
     echo $sample | base64
     echo $key2 | base64
-    echo "base64 encoded?"
+    echo "base64 -d?"
     echo $base64 | base64 -d
+    echo "echo $base64 | base64"
     echo $base64 | base64
+    echo "echo $key3 | base64"
+    echo $key3 | base64
+    echo "echo $key3 | base64 -d"
+    echo $key3 | base64 -d
   env:
     key1: $(key1)
     sample: $(sample-key)
     key2: $(key2)
+    key3: $(key3)
     bese64: $(base64)
