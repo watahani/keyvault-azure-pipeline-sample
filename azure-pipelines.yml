@@ -28,7 +28,9 @@ steps:
     echo $key1 | base64
     echo $sample | base64
     echo $key2 | base64
+    echo $base64 | base64 -d
   env:
     key1: $(key1)
     sample: $(sample-key)
     key2: $(key2)
+    bese64: $(base64)
