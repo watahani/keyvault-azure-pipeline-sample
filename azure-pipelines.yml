@@ -28,6 +28,7 @@ steps:
     echo $key1 | base64
     echo $sample | base64
     echo $key2 | base64
+    echo "base64 encoded?"
     echo $base64 | base64 -d
   env:
     key1: $(key1)
