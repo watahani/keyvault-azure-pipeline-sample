@@ -36,8 +36,14 @@ steps:
     echo $key3 | base64
     echo 'echo $key3 | base64 -d'
     echo $key3 | base64 -d
+    echo ""
     echo 'base64 -d <<< "$key3"'
     base64 -d <<< "$key3"
+    echo ""
+    echo $key3 | base64 -d >> key3
+    cat key3
+    echo "finish"
+    echo ""
   env:
     key1: $(key1)
     sample: $(sample-key)
